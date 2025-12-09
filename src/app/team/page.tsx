@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-export default function PracticePage() {
+export default function TeamPage() {
   const [mounted, setMounted] = useState(false)
   const [activeSection, setActiveSection] = useState('')
 
@@ -11,7 +11,7 @@ export default function PracticePage() {
     setMounted(true)
     
     const handleScroll = () => {
-      const sections = ['clerk-auth', 'mongodb-crud']
+      const sections = ['team-project', 'team-members']
       const scrollPosition = window.scrollY + 200
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -47,8 +47,16 @@ export default function PracticePage() {
   }
 
   const navItems = [
-    { id: 'clerk-auth', label: 'Clerk Auth' },
-    { id: 'mongodb-crud', label: 'MongoDB CRUD' }
+    { id: 'team-project', label: 'Team Project' },
+    { id: 'team-members', label: 'Team Members' }
+  ]
+
+  const teamMembers = [
+    { name: '곽민경', role: 'PA', task: 'DB 연동', image: '/profile.jpg', portfolioLink: 'https://web-server-last-portfolio.vercel.app', githubLink: 'https://github.com/kkaturi14' },
+    { name: '박혜수', role: 'PA', task: '지역별 게시판 구축', image: '/pandyo.png', portfolioLink: 'https://web-server-class-project-03.vercel.app', githubLink: 'https://github.com/Pandyo' },
+    { name: '심재훈', role: 'PA', task: '메인화면 제작', image: '/sim.png', portfolioLink: 'https://portfolio-v1-khaki-psi.vercel.app', githubLink: 'https://github.com/J4EH00N' },
+    { name: '정윤서', role: 'PA', task: 'Map API 연동', image: '/puppy.jpg', portfolioLink: 'https://wsvbp2.vercel.app', githubLink: 'https://github.com/oesp91' },
+    { name: '정재성', role: 'PM', task: '지역별 게시판 구축', image: '/duck.jpg', portfolioLink: 'https://jbu-2025-2-personal.vercel.app', githubLink: 'https://github.com/Interludeal' }
   ]
 
   return (
@@ -170,23 +178,54 @@ export default function PracticePage() {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
           }}>
-            Practice
+            Team
           </h1>
           <p style={{
             fontSize: '1.125rem',
             color: 'rgba(255, 255, 255, 0.5)'
           }}>
-            My practice
+            Meet our amazing team members
           </p>
         </div>
 
-        {/* Clerk Authentication Demo */}
-        <section id="clerk-auth" style={{
-          marginBottom: '4rem',
+        {/* Team Project Section */}
+        <section id="team-project" style={{
+          marginBottom: '6rem',
           opacity: mounted ? 1 : 0,
           transform: mounted ? 'translateY(0)' : 'translateY(30px)',
           transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s'
         }}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.75rem',
+            marginBottom: '2rem',
+            flexWrap: 'wrap'
+          }}>
+            <h2 style={{
+              fontSize: '2rem',
+              fontWeight: '700',
+              paddingBottom: '1rem',
+              borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+              flex: 1
+            }}>
+              Team Project
+            </h2>
+            {/* NEW Badge */}
+            <div style={{
+              padding: '0.375rem 0.75rem',
+              background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+              borderRadius: '100px',
+              fontSize: '0.75rem',
+              fontWeight: '700',
+              color: '#ffffff',
+              letterSpacing: '0.05em',
+              boxShadow: '0 4px 12px rgba(239, 68, 68, 0.3)'
+            }}>
+              NEW
+            </div>
+          </div>
+
           <div style={{
             padding: '2rem',
             background: 'rgba(255, 255, 255, 0.02)',
@@ -209,123 +248,11 @@ export default function PracticePage() {
               overflow: 'hidden',
               marginBottom: '2rem',
               border: '1px solid rgba(255, 255, 255, 0.1)',
-              background: '#ffffff'
-            }}>
-              <img 
-                src="/clerkapp.png" 
-                alt="Clerk Authentication Demo"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  display: 'block'
-                }}
-              />
-            </div>
-
-            <div>
-              <div style={{
-                display: 'inline-block',
-                padding: '0.5rem 1rem',
-                background: 'rgba(99, 102, 241, 0.2)',
-                border: '1px solid rgba(99, 102, 241, 0.4)',
-                borderRadius: '8px',
-                fontSize: '0.813rem',
-                fontWeight: '600',
-                color: '#a5b4fc',
-                marginBottom: '1rem'
-              }}>
-                User Management
-              </div>
-              
-              <h2 style={{
-                fontSize: '1.5rem',
-                fontWeight: '700',
-                marginBottom: '1rem'
-              }}>
-                Clerk Authentication Demo
-              </h2>
-              
-              <p style={{
-                fontSize: '1rem',
-                color: 'rgba(255, 255, 255, 0.6)',
-                lineHeight: '1.6',
-                marginBottom: '1.5rem'
-              }}>
-                Clerk를 활용한 사용자 인증 시스템 구현. React와 Next.js에 최적화된 사용자 관리 UI 및 API를 통합했습니다.
-              </p>
-              
-              <a 
-                href="https://web-server-nine-lemon.vercel.app/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.5rem',
-                  padding: '0.75rem 1.5rem',
-                  background: 'rgba(99, 102, 241, 0.1)',
-                  border: '1px solid rgba(99, 102, 241, 0.3)',
-                  borderRadius: '8px',
-                  color: '#a5b4fc',
-                  textDecoration: 'none',
-                  fontSize: '0.938rem',
-                  fontWeight: '600',
-                  transition: 'all 0.3s'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(99, 102, 241, 0.2)'
-                  e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.5)'
-                  e.currentTarget.style.color = '#ffffff'
-                  e.currentTarget.style.transform = 'translateY(-2px)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(99, 102, 241, 0.1)'
-                  e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.3)'
-                  e.currentTarget.style.color = '#a5b4fc'
-                  e.currentTarget.style.transform = 'translateY(0)'
-                }}
-              >
-                View Demo
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* MongoDB CRUD Demo */}
-        <section id="mongodb-crud" style={{
-          marginBottom: '4rem',
-          opacity: mounted ? 1 : 0,
-          transform: mounted ? 'translateY(0)' : 'translateY(30px)',
-          transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s'
-        }}>
-          <div style={{
-            padding: '2rem',
-            background: 'rgba(255, 255, 255, 0.02)',
-            border: '1px solid rgba(255, 255, 255, 0.05)',
-            borderRadius: '16px',
-            transition: 'all 0.3s',
-            position: 'relative'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'
-            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'
-            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'
-          }}>
-            {/* Image */}
-            <div style={{
-              width: '100%',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              marginBottom: '2rem',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
               background: '#1a1a1f'
             }}>
               <img 
-                src="/mongo-crud.png" 
-                alt="MongoDB CRUD Demo"
+                src="/동네ON 메인화면.png" 
+                alt="동네 ON - 지역 기반 소통 플랫폼"
                 style={{
                   width: '100%',
                   height: 'auto',
@@ -346,37 +273,16 @@ export default function PracticePage() {
                 color: '#10b981',
                 marginBottom: '1rem'
               }}>
-                Database
+                Community Platform
               </div>
               
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.75rem',
-                marginBottom: '1rem',
-                flexWrap: 'wrap'
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: '700',
+                marginBottom: '1rem'
               }}>
-                <h2 style={{
-                  fontSize: '1.5rem',
-                  fontWeight: '700',
-                  margin: 0
-                }}>
-                  MongoDB CRUD Application
-                </h2>
-                {/* NEW Badge */}
-                <div style={{
-                  padding: '0.375rem 0.75rem',
-                  background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
-                  borderRadius: '100px',
-                  fontSize: '0.75rem',
-                  fontWeight: '700',
-                  color: '#ffffff',
-                  letterSpacing: '0.05em',
-                  boxShadow: '0 4px 12px rgba(239, 68, 68, 0.3)'
-                }}>
-                  NEW
-                </div>
-              </div>
+                동네 ON : 지역 기반 소통 플랫폼
+              </h3>
               
               <p style={{
                 fontSize: '1rem',
@@ -384,11 +290,12 @@ export default function PracticePage() {
                 lineHeight: '1.6',
                 marginBottom: '1.5rem'
               }}>
-                MongoDB를 활용한 CRUD 애플리케이션. Google 및 Github 소셜 로그인을 지원하며, 주제 생성, 읽기, 수정, 삭제 기능을 구현했습니다.
+                이웃과 연결되는 새로운 일상. 지역 기반 커뮤니티 플랫폼 '동네 ON'을 통해 실제 이웃들과 진솔한 이야기를 나누고, 
+                지도 기반 지역 선택, 질문 & 답변 게시판, 포인트 시스템, 월별 랭킹 이벤트 등 다양한 기능을 구현했습니다.
               </p>
               
               <a 
-                href="https://mongo-crud-phi.vercel.app/" 
+                href="https://neighborhood-on-cu5h.vercel.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 style={{
@@ -408,19 +315,178 @@ export default function PracticePage() {
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'rgba(16, 185, 129, 0.2)'
                   e.currentTarget.style.borderColor = 'rgba(16, 185, 129, 0.5)'
-                  e.currentTarget.style.color = '#ffffff'
                   e.currentTarget.style.transform = 'translateY(-2px)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = 'rgba(16, 185, 129, 0.1)'
                   e.currentTarget.style.borderColor = 'rgba(16, 185, 129, 0.3)'
-                  e.currentTarget.style.color = '#10b981'
                   e.currentTarget.style.transform = 'translateY(0)'
                 }}
               >
-                View Demo
+                View Project
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* Team Members Section */}
+        <section id="team-members" style={{
+          marginBottom: '4rem',
+          opacity: mounted ? 1 : 0,
+          transform: mounted ? 'translateY(0)' : 'translateY(30px)',
+          transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s'
+        }}>
+          <h2 style={{
+            fontSize: '2rem',
+            fontWeight: '700',
+            marginBottom: '3rem',
+            paddingBottom: '1rem',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+          }}>
+            Team Members
+          </h2>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '2rem'
+          }}>
+            {teamMembers.map((member, index) => (
+              <div
+                key={member.name}
+                style={{
+                  padding: '2rem',
+                  background: 'rgba(255, 255, 255, 0.02)',
+                  border: '1px solid rgba(255, 255, 255, 0.05)',
+                  borderRadius: '16px',
+                  textAlign: 'center',
+                  transition: 'all 0.3s',
+                  opacity: mounted ? 1 : 0,
+                  transform: mounted ? 'translateY(0)' : 'translateY(30px)',
+                  transitionDelay: `${0.6 + index * 0.1}s`
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
+                  e.currentTarget.style.transform = 'translateY(-4px)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'
+                  e.currentTarget.style.transform = 'translateY(0)'
+                }}
+              >
+                <div style={{
+                  width: '120px',
+                  height: '120px',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  margin: '0 auto 1.5rem',
+                  border: '2px solid rgba(255, 255, 255, 0.1)',
+                  background: '#ffffff'
+                }}>
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover'
+                    }}
+                  />
+                </div>
+                
+                <h3 style={{
+                  fontSize: '1.125rem',
+                  fontWeight: '700',
+                  marginBottom: '0.5rem'
+                }}>
+                  {member.name}
+                </h3>
+                
+                <div style={{
+                  fontSize: '0.875rem',
+                  color: 'rgba(255, 255, 255, 0.5)',
+                  marginBottom: '0.75rem'
+                }}>
+                  {member.role}
+                </div>
+                
+                <div style={{
+                  fontSize: '0.813rem',
+                  color: 'rgba(255, 255, 255, 0.6)',
+                  marginBottom: '1.5rem',
+                  lineHeight: '1.4'
+                }}>
+                  {member.task}
+                </div>
+                
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.75rem'
+                }}>
+                  <a
+                    href={member.portfolioLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      padding: '0.75rem 1rem',
+                      background: 'rgba(99, 102, 241, 0.1)',
+                      border: '1px solid rgba(99, 102, 241, 0.3)',
+                      borderRadius: '8px',
+                      color: '#a5b4fc',
+                      fontSize: '0.875rem',
+                      fontWeight: '600',
+                      textAlign: 'center',
+                      textDecoration: 'none',
+                      transition: 'all 0.3s'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'rgba(99, 102, 241, 0.2)'
+                      e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.5)'
+                      e.currentTarget.style.color = '#ffffff'
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(99, 102, 241, 0.1)'
+                      e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.3)'
+                      e.currentTarget.style.color = '#a5b4fc'
+                    }}
+                  >
+                    Portfolio
+                  </a>
+                  <a
+                    href={member.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      padding: '0.75rem 1rem',
+                      background: 'rgba(139, 92, 246, 0.1)',
+                      border: '1px solid rgba(139, 92, 246, 0.3)',
+                      borderRadius: '8px',
+                      color: '#c4b5fd',
+                      fontSize: '0.875rem',
+                      fontWeight: '600',
+                      textAlign: 'center',
+                      textDecoration: 'none',
+                      transition: 'all 0.3s'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'rgba(139, 92, 246, 0.2)'
+                      e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.5)'
+                      e.currentTarget.style.color = '#ffffff'
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)'
+                      e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.3)'
+                      e.currentTarget.style.color = '#c4b5fd'
+                    }}
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -440,7 +506,7 @@ export default function PracticePage() {
           transition: 'all 0.3s',
           opacity: mounted ? 1 : 0,
           transform: mounted ? 'translateY(0)' : 'translateY(30px)',
-          transitionDelay: '0.6s'
+          transitionDelay: '1s'
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'
