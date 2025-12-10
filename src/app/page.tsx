@@ -454,6 +454,12 @@ export default function Home() {
                 link: '/practice'
               },
               {
+                title: 'Daiso Shopping Mall',
+                date: 'Practice',
+                category: 'E-commerce',
+                link: '/practice'
+              },
+              {
                 title: '웹 취약점을 통한 쉘 획득 및 분석',
                 date: 'Security',
                 category: 'Penetration Test',

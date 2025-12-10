@@ -244,6 +244,8 @@ export default function TeamPage() {
             {/* Image */}
             <div style={{
               width: '100%',
+              maxWidth: '800px',
+              margin: '0 auto',
               borderRadius: '12px',
               overflow: 'hidden',
               marginBottom: '2rem',
