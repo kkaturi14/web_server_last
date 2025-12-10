@@ -414,10 +414,38 @@ export default function ProjectsPage() {
                       <p style={{
                         fontSize: '1rem',
                         color: 'rgba(255, 255, 255, 0.6)',
-                        lineHeight: '1.6'
+                        lineHeight: '1.6',
+                        marginBottom: '1.5rem'
                       }}>
                         {project.description}
                       </p>
+                      
+                      <div style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        padding: '0.75rem 1.5rem',
+                        background: `${project.color}10`,
+                        border: `1px solid ${project.color}30`,
+                        borderRadius: '8px',
+                        color: project.color,
+                        fontSize: '0.938rem',
+                        fontWeight: '600',
+                        transition: 'all 0.3s',
+                        cursor: 'pointer'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = `${project.color}20`
+                        e.currentTarget.style.borderColor = `${project.color}50`
+                        e.currentTarget.style.transform = 'translateY(-2px)'
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = `${project.color}10`
+                        e.currentTarget.style.borderColor = `${project.color}30`
+                        e.currentTarget.style.transform = 'translateY(0)'
+                      }}>
+                        View Project →
+                      </div>
                     </div>
                   </a>
                 ) : (
