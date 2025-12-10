@@ -108,7 +108,7 @@ export default function Home() {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px)',
+        backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px)',
         backgroundSize: '100px 100px',
         opacity: 0.5,
         transform: `translateY(${scrollY * 0.5}px)`,
@@ -471,7 +471,7 @@ export default function Home() {
                 href={item.link}
                 style={{
                   padding: '2rem',
-                  background: 'rgba(255, 255, 255, 0.02)',
+                  background: 'rgba(255, 255, 255, 0.04)',
                   border: '1px solid rgba(255, 255, 255, 0.05)',
                   borderRadius: '16px',
                   textDecoration: 'none',
@@ -489,7 +489,7 @@ export default function Home() {
                   e.currentTarget.style.transform = 'translateY(-4px)'
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'
                   e.currentTarget.style.transform = 'translateY(0)'
                 }}

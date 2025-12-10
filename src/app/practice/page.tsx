@@ -169,7 +169,7 @@ export default function PracticePage() {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px)',
+        backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px)',
         backgroundSize: '100px 100px',
         opacity: 0.5,
         pointerEvents: 'none'
@@ -259,15 +259,15 @@ export default function PracticePage() {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
-          }}>
-            Practice
-          </h1>
-          <p style={{
-            fontSize: '1.125rem',
+      }}>
+        Practice
+      </h1>
+      <p style={{ 
+        fontSize: '1.125rem', 
             color: 'rgba(255, 255, 255, 0.5)'
-          }}>
-            My practice
-          </p>
+      }}>
+        My practice
+      </p>
         </div>
 
         {/* Projects Grid */}
@@ -278,7 +278,7 @@ export default function PracticePage() {
           marginBottom: '4rem',
           alignItems: 'stretch'
         }}>
-        {/* Clerk Authentication Demo */}
+      {/* Clerk Authentication Demo */}
         <section id="clerk-auth" style={{
           opacity: mounted ? 1 : 0,
           transform: mounted ? 'translateY(0)' : 'translateY(30px)',
@@ -292,10 +292,10 @@ export default function PracticePage() {
               scrollToSection('clerk-auth')
             }}
             style={{
-              padding: '2rem',
+        padding: '2rem',
               background: clickedCard === 'clerk-auth' 
                 ? 'rgba(99, 102, 241, 0.1)' 
-                : 'rgba(255, 255, 255, 0.02)',
+                : 'rgba(255, 255, 255, 0.04)',
               border: clickedCard === 'clerk-auth'
                 ? '2px solid rgba(99, 102, 241, 0.6)'
                 : '1px solid rgba(255, 255, 255, 0.05)',
@@ -318,51 +318,51 @@ export default function PracticePage() {
             }}
             onMouseLeave={(e) => {
               if (clickedCard !== 'clerk-auth') {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'
               }
-            }}>
-            {/* Image */}
-            <div style={{
-              width: '100%',
+      }}>
+        {/* Image */}
+        <div style={{
+          width: '100%',
               aspectRatio: '16/9',
               borderRadius: '12px',
-              overflow: 'hidden',
+          overflow: 'hidden',
               marginBottom: '2rem',
               border: '1px solid rgba(255, 255, 255, 0.1)',
-              background: '#ffffff'
-            }}>
-              <img 
-                src="/clerkapp.png" 
-                alt="Clerk Authentication Demo"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
+          background: '#ffffff'
+        }}>
+          <img 
+            src="/clerkapp.png" 
+            alt="Clerk Authentication Demo"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
                   display: 'block'
-                }}
-              />
-            </div>
+            }}
+          />
+        </div>
 
             <div>
-              <div style={{
-                display: 'inline-block',
+        <div style={{
+          display: 'inline-block',
                 padding: '0.5rem 1rem',
-                background: 'rgba(99, 102, 241, 0.2)',
-                border: '1px solid rgba(99, 102, 241, 0.4)',
+          background: 'rgba(99, 102, 241, 0.2)',
+          border: '1px solid rgba(99, 102, 241, 0.4)',
                 borderRadius: '8px',
                 fontSize: '0.813rem',
                 fontWeight: '600',
-                color: '#a5b4fc',
+          color: '#a5b4fc',
                 marginBottom: '1rem'
-              }}>
-                User Management
-              </div>
+        }}>
+          User Management
+        </div>
               
               <h2 style={{
                 fontSize: '1.5rem',
                 fontWeight: '700',
-                marginBottom: '1rem'
+          marginBottom: '1rem'
               }}>
                 Clerk Auth Demo
               </h2>
@@ -373,18 +373,18 @@ export default function PracticePage() {
                 lineHeight: '1.6',
                 marginBottom: '1.5rem',
                 flex: 1
-              }}>
-                Clerk를 활용한 사용자 인증 시스템 구현. React와 Next.js에 최적화된 사용자 관리 UI 및 API를 통합했습니다.
-              </p>
+        }}>
+          Clerk를 활용한 사용자 인증 시스템 구현. React와 Next.js에 최적화된 사용자 관리 UI 및 API를 통합했습니다.
+        </p>
               
-              <a 
-                href="https://web-server-nine-lemon.vercel.app/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.5rem',
+        <a 
+          href="https://web-server-nine-lemon.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.5rem',
                   padding: '0.75rem 1.5rem',
                   background: 'rgba(99, 102, 241, 0.1)',
                   border: '1px solid rgba(99, 102, 241, 0.3)',
@@ -431,7 +431,7 @@ export default function PracticePage() {
               padding: '2rem',
               background: clickedCard === 'mongodb-crud' 
                 ? 'rgba(16, 185, 129, 0.1)' 
-                : 'rgba(255, 255, 255, 0.02)',
+                : 'rgba(255, 255, 255, 0.04)',
               border: clickedCard === 'mongodb-crud'
                 ? '2px solid rgba(16, 185, 129, 0.6)'
                 : '1px solid rgba(255, 255, 255, 0.05)',
@@ -455,7 +455,7 @@ export default function PracticePage() {
             }}
             onMouseLeave={(e) => {
               if (clickedCard !== 'mongodb-crud') {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'
               }
             }}>
@@ -588,7 +588,7 @@ export default function PracticePage() {
               padding: '2rem',
               background: clickedCard === 'shopping-mall' 
                 ? 'rgba(168, 85, 247, 0.1)' 
-                : 'rgba(255, 255, 255, 0.02)',
+                : 'rgba(255, 255, 255, 0.04)',
               border: clickedCard === 'shopping-mall'
                 ? '2px solid rgba(168, 85, 247, 0.6)'
                 : '1px solid rgba(255, 255, 255, 0.05)',
@@ -611,7 +611,7 @@ export default function PracticePage() {
             }}
             onMouseLeave={(e) => {
               if (clickedCard !== 'shopping-mall') {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'
               }
             }}>
@@ -664,7 +664,7 @@ export default function PracticePage() {
                   borderRadius: '100px',
                   fontSize: '0.75rem',
                   fontWeight: '700',
-                  color: '#ffffff',
+            color: '#ffffff',
                   letterSpacing: '0.05em',
                   boxShadow: '0 4px 12px rgba(239, 68, 68, 0.3)'
                 }}>
@@ -703,9 +703,9 @@ export default function PracticePage() {
                   border: '1px solid rgba(168, 85, 247, 0.3)',
                   borderRadius: '8px',
                   color: '#a855f7',
-                  textDecoration: 'none',
+            textDecoration: 'none',
                   fontSize: '0.938rem',
-                  fontWeight: '600',
+            fontWeight: '600',
                   transition: 'all 0.3s'
                 }}
                 onMouseEnter={(e) => {
@@ -737,7 +737,7 @@ export default function PracticePage() {
         }}>
           <div style={{
             padding: '2rem',
-            background: 'rgba(255, 255, 255, 0.02)',
+            background: 'rgba(255, 255, 255, 0.04)',
             border: '1px solid rgba(255, 255, 255, 0.05)',
             borderRadius: '16px',
             transition: 'all 0.3s',
@@ -799,7 +799,7 @@ export default function PracticePage() {
                 overflowY: 'auto',
                 marginBottom: '2rem',
                 padding: '1rem',
-                background: 'rgba(255, 255, 255, 0.02)',
+                background: 'rgba(255, 255, 255, 0.04)',
                 borderRadius: '12px',
                 border: '1px solid rgba(255, 255, 255, 0.05)'
               }}>
@@ -996,12 +996,12 @@ export default function PracticePage() {
                     </div>
                   ))
                 )}
-              </div>
+      </div>
 
               {/* 방명록 작성 폼 */}
               <form onSubmit={handleSubmit} style={{
                 padding: '1.5rem',
-                background: 'rgba(255, 255, 255, 0.02)',
+                background: 'rgba(255, 255, 255, 0.04)',
                 borderRadius: '12px',
                 border: '1px solid rgba(255, 255, 255, 0.05)'
               }}>
@@ -1113,8 +1113,8 @@ export default function PracticePage() {
           e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'
           e.currentTarget.style.transform = 'translateX(0)'
         }}>
-          ← Back to Home
-        </Link>
+        ← Back to Home
+      </Link>
       </div>
     </div>
   )

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { ClerkProvider } from '@clerk/nextjs'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
@@ -21,18 +20,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body
-          className={`${inter.variable} antialiased`}
-          style={{ fontFamily: 'var(--font-inter), sans-serif' }}
-        >
-          <Header />
-          <main className="min-h-screen pt-24">
-            {children}
-          </main>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body
+        className={`${inter.variable} antialiased`}
+        style={{ fontFamily: 'var(--font-inter), sans-serif' }}
+      >
+        <Header />
+        <main className="min-h-screen pt-24">
+          {children}
+        </main>
+      </body>
+    </html>
   )
 }

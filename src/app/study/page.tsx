@@ -66,7 +66,7 @@ export default async function StudyPage() {
               key={study._id}
               style={{
                 padding: '2rem',
-                background: 'rgba(255, 255, 255, 0.02)',
+                background: 'rgba(255, 255, 255, 0.04)',
                 border: '1px solid rgba(255, 255, 255, 0.05)',
                 borderRadius: '16px',
                 transition: 'all 0.3s'

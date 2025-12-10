@@ -119,7 +119,7 @@ export default function ProjectsPage() {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px)',
+        backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px)',
         backgroundSize: '100px 100px',
         opacity: 0.5,
         pointerEvents: 'none'
@@ -245,7 +245,7 @@ export default function ProjectsPage() {
             {cloudProjects.map((project, index) => (
               <div key={index} style={{
                 padding: '2rem',
-                background: 'rgba(255, 255, 255, 0.02)',
+                background: 'rgba(255, 255, 255, 0.04)',
                 border: '1px solid rgba(255, 255, 255, 0.05)',
                 borderRadius: '16px',
                 transition: 'all 0.3s',
@@ -257,7 +257,7 @@ export default function ProjectsPage() {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'
               }}>
                 <div style={{
@@ -340,7 +340,7 @@ export default function ProjectsPage() {
                     style={{
                       display: 'block',
                       padding: '2rem',
-                      background: 'rgba(255, 255, 255, 0.02)',
+                      background: 'rgba(255, 255, 255, 0.04)',
                       border: '1px solid rgba(255, 255, 255, 0.05)',
                       borderRadius: '16px',
                       textDecoration: 'none',
@@ -354,7 +354,7 @@ export default function ProjectsPage() {
                       e.currentTarget.style.transform = 'translateY(-2px)'
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'
+                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'
                       e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'
                       e.currentTarget.style.transform = 'translateY(0)'
                     }}
@@ -423,7 +423,7 @@ export default function ProjectsPage() {
                 ) : (
                   <div style={{
                     padding: '2rem',
-                    background: 'rgba(255, 255, 255, 0.02)',
+                    background: 'rgba(255, 255, 255, 0.04)',
                     border: '1px solid rgba(255, 255, 255, 0.05)',
                     borderRadius: '16px',
                     transition: 'all 0.3s',
@@ -435,7 +435,7 @@ export default function ProjectsPage() {
                     e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'
                     e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'
                   }}>
                     <div style={{

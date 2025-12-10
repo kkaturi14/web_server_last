@@ -81,7 +81,7 @@ export default function ProfilePage() {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px)',
+        backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px)',
         backgroundSize: '100px 100px',
         opacity: 0.5,
         pointerEvents: 'none'
@@ -255,7 +255,7 @@ export default function ProfilePage() {
               ].map((item, index) => (
                 <div key={index} style={{
                   padding: '1.5rem',
-                  background: 'rgba(255, 255, 255, 0.02)',
+                  background: 'rgba(255, 255, 255, 0.04)',
                   border: '1px solid rgba(255, 255, 255, 0.05)',
                   borderRadius: '12px',
                   transition: 'all 0.3s'
@@ -265,7 +265,7 @@ export default function ProfilePage() {
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'
                 }}>
                   <div style={{
@@ -289,7 +289,7 @@ export default function ProfilePage() {
             <div style={{
               marginTop: '2rem',
               padding: '1.5rem',
-              background: 'rgba(255, 255, 255, 0.02)',
+              background: 'rgba(255, 255, 255, 0.04)',
               border: '1px solid rgba(255, 255, 255, 0.05)',
               borderRadius: '12px'
             }}>
@@ -337,7 +337,7 @@ export default function ProfilePage() {
           
           <div style={{
             padding: '2rem',
-            background: 'rgba(255, 255, 255, 0.02)',
+            background: 'rgba(255, 255, 255, 0.04)',
             border: '1px solid rgba(255, 255, 255, 0.05)',
             borderRadius: '16px',
             position: 'relative',
@@ -348,7 +348,7 @@ export default function ProfilePage() {
             e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'
+            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'
             e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'
           }}>
             <div style={{
@@ -435,7 +435,7 @@ export default function ProfilePage() {
             ].map((activity, index) => (
               <div key={index} style={{
                 padding: '1.5rem',
-                background: 'rgba(255, 255, 255, 0.02)',
+                background: 'rgba(255, 255, 255, 0.04)',
                 border: '1px solid rgba(255, 255, 255, 0.05)',
                 borderRadius: '12px',
                 fontSize: '1rem',
@@ -448,7 +448,7 @@ export default function ProfilePage() {
                 e.currentTarget.style.transform = 'translateX(4px)'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'
                 e.currentTarget.style.transform = 'translateX(0)'
               }}>
